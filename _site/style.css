@@ -1,0 +1,105 @@
+:root {
+    --color1: #000;
+    --color2: #fff;
+}
+
+
+*::-webkit-scrollbar {
+    width: 1rem;
+    border-left: 1.5px solid var(--color1);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--color1);
+    border-left: 1.5px solid var(--color1);
+}
+
+* a {
+    color: var(--color1);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    padding: 0;
+    margin: 0;
+    font-family: 'JetBrains Mono', monospace;
+    background-color: var(--color2);
+    color: var(--color1);
+    overflow: clip;
+}
+
+#nav-bar {
+    display: flex;
+    height: 3rem;
+    width: 100%;
+    gap: 2rem;
+    border-top: none;
+    border-bottom: 1.5px solid var(--color1);
+    align-items: center;
+    justify-content: center;
+    overflow: -moz-hidden-unscrollable;
+    background-color: var(--color2);
+}
+
+#content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 20% 5% 20%;
+    overflow-y: scroll;
+    overflow-x: clip;
+    scroll-behavior: smooth;
+}
+
+#background {
+    height: 40dvh;
+    width: 100svw;
+    object-fit: cover;
+    image-rendering: pixelated;
+}
+
+#contacts {
+    display: flex;
+    padding: 2rem 0 2rem 0;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#project-list a {
+    display: flex;
+    border-radius: 1rem;
+    overflow: clip;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        flex-direction: column-reverse;
+    }
+
+    #nav-bar {
+        border-top: 1.5px solid var(--color1);
+        border-bottom: none;
+    }
+
+    #content {
+        padding: 0 10% 10% 10%;
+    }
+
+    #contacts {
+        align-items: center;
+        flex-direction: column;
+    }
+
+}

@@ -1,0 +1,14 @@
+---
+layout: "layout/base.html"
+title: "{{ title }}"
+date: "{{ date }}"
+permalink: "/blog/{{ title | slug }}/index.html"
+---
+
+<div id="content">
+    <h1 class="article--title">{{ title }}</h1>
+    <div class="date">{{ date | formatDate }}</div>
+    <article>
+        {{ content | safe }}
+    </article>
+</div>
